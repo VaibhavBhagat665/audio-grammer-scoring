@@ -71,10 +71,3 @@ Rough order of the notebook:
 6. Metrics, plots (predicted vs. true, top LightGBM feature importances), and the final predictions file
 
 A GPU makes the embedding and transcription steps much faster, but it also works on CPU with the smaller Whisper model.
-
-## Things I'd try next
-
-- Give Whisper's raw output more thought: for example, comparing it against a second ASR system, since disagreement between the two can hint at disfluent or ungrammatical speech.
-- Try other wav2vec2 layers or other speech models, and pool in smarter ways than a plain mean.
-- Add real grammar-specific signals, such as error counts from a grammar checker or language-model perplexity on the transcript.
-- Tune the blend weights instead of using a flat 50/50, though with this little data I'd be careful about overfitting the weights.
